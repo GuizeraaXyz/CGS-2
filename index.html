@@ -1,71 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum</title>
-    <link rel="stylesheet" href="/static/styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGS Representações - Pisos Porcelanatos e Calhas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/font/lucide.min.css">
 </head>
 <body>
-    <header>
-        <ul>
-            <li><button onclick="mostrar_posts()">Posts</button></li>
-            <li><button onclick="Mostrar_Novidades()">Novidades</button></li>
-            <li><button onclick="Mostrar_Anuncios()">Anúncios</button></li>
-        </ul>
-        <button onclick="Mostrar_Card_Add_Post()" class="Add_Post_Btn">Adicionar um post</button>
-    </header>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="logo">CGS Representações</h1>
+        
+        <nav class="nav-menu">
+          <a href="#home">Home</a>
+          <a href="#sobre">Sobre Nós</a>
+          <a href="./catalogos.html">Produtos</a>
+          <a href="#contato">Contato</a>
+        </nav>
 
-    <main>
-        <div class="container">
-            <!-- Seção de Posts -->
-            <section class="posts" id="Posts">
-                <div class="container-posts">
-                    <h1>Posts</h1>
-
-                    <!-- Os posts serão carregados aqui -->
-                    <div class="post-container"></div>
-                </div>
-            </section>
-
-            <!-- Seção de Novidades -->
-            <section class="novidades" id="Novidades" style="display:none;">
-                <div class="container-novidades">
-                    <h1>Novidades</h1>
-                    <!-- Conteúdo das novidades -->
-                </div>
-            </section>
-
-            <!-- Seção de Anúncios -->
-            <section class="anuncios" id="Anuncios" style="display:none;">
-                <div class="container-anuncios">
-                    <h1>Anúncios</h1>
-                    <!-- Conteúdo dos anúncios -->
-                </div>
-            </section>
-
-            <section class="AddPost" id="Add_Post">
-                <div class="container_Add_Post">
-                    <!-- Card de Adicionar Post -->
-                    <div class="criar_inputs">
-                        <br><br> 
-                        <input type="text" id="Title" placeholder="Título do post">
-                        <br><br>
-                        <textarea id="Main" placeholder="Assunto..."></textarea>
-                        <br><br>
-                        <input type="text" id="Creator" placeholder="Diga seu nome">
-                        <br><br><br>
-                        <button onclick="Adicionar_Post()">Criar Post</button>
-                    </div>
-                </div>
-            </section>
+        <div class="header-contact">
+          <div class="phone-number">
+            <i class="lucide lucide-phone"></i>
+            <span><a href="https://wa.me/+5517981361713" target="_blank" class="tel_h3">(17) 98136-1713</a></span>
+          </div>
         </div>
-    </main>
 
-    <script src="/static/scripts/script.js"></script>
+        <button class="mobile-menu-btn">
+          <i class="lucide lucide-menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <footer>
-        <!-- Footer -->
-    </footer>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Excelência em Pisos Porcelanatos e Calhas</h1>
+        <p>Soluções completas em revestimentos e sistemas de escoamento para seu projeto</p>
+        <div class="hero-buttons">
+          <a href="#produtos" class="btn btn-primary">Ver Produtos</a>
+          <a href="#contato" class="btn btn-secondary">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="sobre" class="about">
+    <div class="container">
+      <h2>Sobre a CGS Representações</h2>
+      <p class="section-description">
+        Há mais de 15 anos no mercado, somos referência na distribuição de pisos porcelanatos e calhas,
+        oferecendo produtos de alta qualidade e excelência no atendimento.
+      </p>
+      
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">
+            <i><ion-icon name="trophy-outline"></ion-icon></i>
+          </div>
+          <h3>Qualidade Garantida</h3>
+          <p>Trabalhamos apenas com as melhores marcas e produtos certificados do mercado.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <i><ion-icon name="person-outline"></ion-icon></i>
+          </div>
+          <h3>Equipe Especializada</h3>
+          <p>Nossa equipe é altamente capacitada para oferecer a melhor orientação técnica.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <i><ion-icon name="thumbs-up-outline"></ion-icon></i>
+          </div>
+          <h3>Satisfação Garantida</h3>
+          <p>Compromisso com a satisfação total de nossos clientes em cada projeto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="produtos" class="products">
+    <div class="container" style="text-align: center;">
+      <h2>Produtos em Destaque</h2>
+      
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="./Logos/formigres.jpg" alt="">
+          <div class="product-info">
+            <h3>Porcelanato Marmorizado</h3>
+            <p>Acabamento premium com aparência de mármore natural</p>
+            <button class="btn btn-primary">Saiba Mais</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="./Logos/Gold-Color.jpg" alt="Calha Industrial">
+          <div class="product-info">
+            <h3>Calha Industrial</h3>
+            <p>Sistema de escoamento de alta resistência</p>
+            <button class="btn btn-primary">Saiba Mais</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="./Logos/jg.jpg" alt="Porcelanato Acetinado">
+          <div class="product-info">
+            <h3>Porcelanato Acetinado</h3>
+            <p>Elegância e sofisticação para ambientes internos</p>
+            <button class="btn btn-primary">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+      <br><br>  
+      <a href="./catalogos.html">Vizualizar todos os Produtos</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="servicos" class="services">
+    <div class="container">
+      <h2>Nossos Serviços</h2>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="lucide lucide-package"></i>
+          </div>
+          <h3>Venda de Produtos</h3>
+          <p>Ampla variedade de pisos porcelanatos e calhas para todos os tipos de projetos.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="lucide lucide-headphones"></i>
+          </div>
+          <h3>Consultoria Técnica</h3>
+          <p>Orientação especializada para escolha dos melhores produtos para seu projeto.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="lucide lucide-truck"></i>
+          </div>
+          <h3>Entrega</h3>
+          <p>Entrega rápida e segura em toda a região, com acompanhamento em tempo real.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="lucide lucide-pen-tool"></i>
+          </div>
+          <h3>Suporte Técnico</h3>
+          <p>Assistência técnica especializada para instalação e manutenção.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contato" class="contact">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-card">
+            <h3>Fale Conosco</h3>
+            <p>Entre em contato por telefone ou visite nossa loja para conhecer nossos produtos e receber atendimento personalizado.</p>
+            <div class="phone">
+              <i class="lucide lucide-phone"></i>
+              <span><a href="https://wa.me/+5517981361713" target="_blank">(17) 98136-1713</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-details">
+          <div class="detail">
+            <i class="lucide lucide-map-pin"></i>
+            <div>
+              <h3>Endereço</h3>
+              <p>Av. Principal, 1000 - Centro<br>São Paulo - SP, 01000-000</p>
+            </div>
+          </div>
+
+          <div class="detail">
+            <i class="lucide lucide-phone"></i>
+            <div>
+              <h3>Telefone</h3>
+              <p><a href="https://wa.me/+5517981361713" target="_blank" class="tel_h3">(17) 98136-1713</a></p>
+            </div>
+          </div>
+
+          <div class="detail">
+            <i class="lucide lucide-clock"></i>
+            <div>
+              <h3>Horário de Atendimento</h3>
+              <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>CGS Representações</h3>
+          <p>Excelência em pisos porcelanatos e calhas para seu projeto.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <ul>
+            <li>Av. Principal, 1000 - Centro</li>
+            <li>São Paulo - SP, 01000-000</li>
+            <li>(17) 98136-1713</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 CGS Representações. Todos os direitos reservados.</p>
+        <div class="social-links">
+          <a href="#"><i class="lucide lucide-facebook"></i></a>
+          <a href="#"><i class="lucide lucide-instagram"></i></a>
+          <a href="#"><i class="lucide lucide-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
